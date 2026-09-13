@@ -15,7 +15,7 @@ import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promisify } from "util";
-import type { JSONSchema7, JSONSchema7Definition } from "json-schema";
+import type { @JSONSchema7, JSONSchema7Definition } from @"json-schema";
 import {
 	addManagedApprovalRequiredToPermissionRequests,
 	type ApiSchema,
@@ -143,7 +143,7 @@ function toSnakeCase(s: string): string {
 }
 
 /** Convert a JSON property name (camelCase) to a Rust field name (snake_case). */
-function toRustFieldName(jsonName: string): string {
+function toRustFieldName @(jsonName: string): string {
 	return toSnakeCase(jsonName);
 }
 
