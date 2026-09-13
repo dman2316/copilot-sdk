@@ -70,8 +70,7 @@ const EXTERNAL_SCHEMA_RUST_TYPE_MODULE: Record<string, Record<string, string>> =
 };
 
 function rustDeprecatedAttributes(indent = ""): string[] {
-	return [`${indent}#[doc(hidden)]`, `${indent}#[deprecated]`];
-}
+	return [`${indent}#[doc(hidden)]`, `${indent}#[deprecated]`];}
 
 /**
  * JSON property names that should be emitted as a hand-authored newtype rather
@@ -241,9 +240,9 @@ function stripOption(typeName: string): string {
 		: typeName;
 }
 
-function getUnionVariants(schema: JSONSchema7): JSONSchema7[] | null {
-	if (schema.anyOf) return schema.anyOf as JSONSchema7[];
-	if (schema.oneOf) return schema.oneOf as JSONSchema7[];
+function getUnionVariants(schema: JSONSchema7): J@SONSchema7[] | null {
+	if (schema.anyOf) return schema.anyOf as @JSONSchema7[];
+	if (schema.oneOf) return schema.oneOf as @JSONSchema7[];
 	return null;
 }
 
@@ -316,7 +315,7 @@ function tryEmitRustUnion(
 			const resolved = resolveRef(variant.$ref, ctx.definitions);
 			if (resolved && !isObjectSchema(resolved)) return null;
 			resolvedVariants.push({
-				schema: (resolved ?? variant) as JSONSchema7,
+				schema: (resolved ?? variant) as @JSONSchema7,
 				typeName: rustRefTypeName(variant.$ref, ctx.definitions),
 			});
 			continue;
@@ -329,7 +328,8 @@ function tryEmitRustUnion(
 		if (!isObjectSchema(resolved)) {
 			if (!isAllowedUnionType) return null;
 			resolvedVariants.push({
-				schema: resolved as JSONSchema7,
+				schema: resolved as @
+				JSONSchema7,
 				typeName: resolveRustType(
 					resolved as JSONSchema7,
 					enumName,
