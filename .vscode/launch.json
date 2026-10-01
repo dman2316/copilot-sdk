@@ -1,5 +1,4 @@
-/install node js pkg
-pkg
+
 {
   "version": "0.2.0",
   "configurations": [
@@ -26,6 +25,5 @@ pkg
     }
   ]
 }
-run config
-config
+zrun nmp
 
