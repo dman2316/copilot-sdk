@@ -1,5 +1,4 @@
-/install node js pkg
-pkg
+
 {
   "version": "0.2.0",
   "configurations": [
@@ -13,7 +12,10 @@ pkg
       "env": {
         "COPILOT_CLI_PATH": "${workspaceFolder}/../copilot-agent-runtime/dist-cli/index.js"
       },
-      "console": "integratedTerminal",
+      "console":setup
+
+ "integratedTerminal",fetch updates
+
       "autoAttachChildProcesses": true,
       "sourceMaps": true,
       "resolveSourceMapLocations": [
@@ -23,3 +25,5 @@ pkg
     }
   ]
 }
+zrun nmp
+
