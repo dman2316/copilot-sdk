@@ -13,7 +13,10 @@ pkg
       "env": {
         "COPILOT_CLI_PATH": "${workspaceFolder}/../copilot-agent-runtime/dist-cli/index.js"
       },
-      "console": "integratedTerminal",
+      "console":setup
+
+ "integratedTerminal",fetch updates
+
       "autoAttachChildProcesses": true,
       "sourceMaps": true,
       "resolveSourceMapLocations": [
@@ -23,3 +26,6 @@ pkg
     }
   ]
 }
+run config
+config
+
